@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*colors*/
+    --Yellow: hsl(47, 88%, 63%);
+
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
+
+    /*font*/
+    --Font-family: 'Figtree', sans-serif;
+    --Font-size: 16px;
+    --Fant-weight:600;
+    --Fant-weight-bold:800;
+
+    --Border-radius:10px;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+    background-color: var(--Yellow);
+    font-family: var(--Font-family);
+    font-size: var(--Font-size);
+    font-weight: var(--Fant-weight);
+}
+
+main{
+    width: 25%;
+    height: auto;
+    padding: 15px;
+    border-radius: var(--Border-radius);
+    border:1px solid var(--Black);
+    box-shadow: 7px 7px 1px var(--Black);
+    background-color: var(--White);
+    color: var(--Black);
+    display: grid;
+    grid-gap: 15px;
+}
+
+.image{
+    width: 100%;
+    border-radius: var(--Border-radius);
+}
+
+h1,h4,.user-name{
+    font-weight: var(--Fant-weight-bold);
+}
+
+h4{
+    background-color: var(--Yellow);
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 30%;
+}
+
+h1{
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+h1:hover{
+    color: var(--Yellow);
+}
+
+.text{
+    color: var(--Grey);
+}
+
+.profile{
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.profile-img{
+    width: 100%;
+}
+
+@media (max-width:1130px) {
+    main{
+        width: 35%;
+    }
+}
+
+@media (max-width:900px) {
+    main{
+        width: 50%;
+    }
+}
+
+@media (max-width:550px) {
+    main{
+        width: 80%;
+    }
+    h4{
+        width: 40%;
+        padding: auto;
+    }
+}
